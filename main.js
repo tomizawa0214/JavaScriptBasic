@@ -1,12 +1,15 @@
 'use strict';
 
-// 定数 const
-// 変数 let var
+// let hp = 100;
+//
+// while (hp > 0) {
+//   console.log(`${hp} HP left!`)
+//   hp -= 15;
+// }
 
-let price = 150;
-console.log(price * 140);
-console.log(price * 160);
+let hp = -50;
 
-price = 170;
-console.log(price * 140);
-console.log(price * 160);
+do {
+  console.log(`${hp} HP left!`)
+  hp -= 15;
+} while (hp > 0)
