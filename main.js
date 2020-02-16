@@ -2,11 +2,9 @@
 
 {
   document.querySelector('button').addEventListener('click',() => {
-    const item0 = document.querySelectorAll('li')[0];
-    const copy = item0.cloneNode(true);
-
-    const ul = document.querySelector('ul');
-    const item2 = document.querySelectorAll('li')[2];
-    ul.insertBefore(copy, item2);
+    const li = document.createElement('li');
+    const color = document.querySelector('select');
+    li.textContent = `${color.value} - ${color.selectedIndex}`;
+    document.querySelector('ul').appendChild(li);
   });
 }
