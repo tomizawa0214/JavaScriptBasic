@@ -1,10 +1,9 @@
 'use strict';
 
 {
-  document.querySelector('button').addEventListener('click',() => {
-    const li = document.createElement('li');
-    const color = document.querySelector('select');
-    li.textContent = `${color.value} - ${color.selectedIndex}`;
-    document.querySelector('ul').appendChild(li);
+  document.querySelector('ul').addEventListener('click', e => {
+    if (e.target.nodeName === 'LI'){
+      e.target.classList.toggle('done');
+    }
   });
 }
